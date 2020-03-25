@@ -105,7 +105,7 @@ class ErgWebsocketServerController extends Controller {
             foreach ($client_read as $client_connect) {
 
                 $client_data = fread($client_connect, 100000);
-                // если от нас отключился клиент, забываем его как бывшую.
+                // если от нас отключился клиент, забываем его.
                 if (!$client_data) {
                     // закрываем соединение
                     fclose($client_connect);
